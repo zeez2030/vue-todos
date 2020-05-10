@@ -1,15 +1,14 @@
 <template>
-  <todo-list list-name="My to-dos" />
+  <div class="about">
+    <h1>Home</h1>
+    <p>
+      This is the TodoList App For InstaBug Task
+    </p>
+  </div>
 </template>
-
 <script>
-import TodoList from "../components/TodoList.vue";
-
 export default {
-  name: "Home",
-  components: {
-    TodoList
-  }
+  name: "Home"
 };
 </script>
 
