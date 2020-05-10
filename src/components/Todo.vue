@@ -1,31 +1,37 @@
 <template>
   <li class="d-flex align-items-center list-group-item">
-    <input type="checkbox" v-on:change="$emit('on-toggle')" />
-    <button
-      class="btn border-0 flex-grow-1 text-left shadow-none"
-      :class="{ completed }"
-      v-if="!isEditing"
-    >
-      <span>{{ description }}</span>
-    </button>
-    <form v-else class="flex-grow-1" @submit.prevent="finishEditing()">
-      <input
-        type="text"
-        class="form-control"
-        v-model="newTodoDescription"
-        @blur="finishEditing()"
-        ref="newTodo"
-      />
-    </form>
-    <button
-      @click="startEditing()"
-      class="btn btn-outline-primary border-0 ml-2"
-    >
-      <span class="fa fa-edit"></span>
-    </button>
-    <button @click="$emit('on-delete')" class="btn btn-outline-danger border-0">
-      <span class="fa fa-trash"></span>
-    </button>
+    <template v-if="page==='todo'">
+      <input type="checkbox" v-on:change="onCheckBox" />
+    </template>
+    <template v-if="page==='todo'">
+      <button
+        class="btn border-0 flex-grow-1 text-left shadow-none"
+        :class="{ completed }"
+        v-if="!isEditing"
+      >
+        <span>{{ description }}</span>
+      </button>
+      <form v-else class="flex-grow-1" @submit.prevent="finishEditing()">
+        <input
+          type="text"
+          class="form-control"
+          v-model="newTodoDescription"
+          @blur="finishEditing()"
+          ref="newTodo"
+        />
+      </form>
+      <button @click="startEditing()" class="btn btn-outline-primary border-0 ml-2">
+        <span class="fa fa-edit"></span>
+      </button>
+      <button @click="$emit('on-delete')" class="btn btn-outline-danger border-0">
+        <span class="fa fa-trash"></span>
+      </button>
+    </template>
+    <template v-else>
+      <button class="btn border-0 flex-grow-1 text-left shadow-none">
+        <span>{{ description }}</span>
+      </button>
+    </template>
   </li>
 </template>
 
@@ -39,7 +45,8 @@ export default {
   },
   props: {
     description: String,
-    completed: Boolean
+    completed: Boolean,
+    page: String
   },
   methods: {
     startEditing() {
@@ -54,6 +61,11 @@ export default {
     finishEditing() {
       this.isEditing = false;
       this.$emit("on-edit", this.newTodoDescription);
+    },
+    onCheckBox(e) {
+      console.log(e);
+      e.target.checked = false;
+      this.$emit("on-toggle");
     }
   }
 };

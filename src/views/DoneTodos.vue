@@ -1,5 +1,5 @@
 <template>
-  <todo-list list-name="New to-dos" />
+  <todo-list list-name="Done to-dos" page="done" />
 </template>
 
 <script>
