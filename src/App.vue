@@ -1,19 +1,16 @@
 <template>
-  <todo-list list-name="My to-dos" />
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
-import TodoList from "./components/TodoList.vue";
-
 export default {
   name: "App",
-  components: {
-    TodoList,
-  },
+  components: {}
 };
 </script>
-
-<style lang="scss">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
