@@ -1,7 +1,7 @@
 <template>
   <li class="d-flex align-items-center list-group-item">
     <template v-if="page === 'todo'">
-      <input type="checkbox" v-on:change="onCheckBox" />
+      <input type="checkbox" v-on:change="onCheckBox" id="checkbox" />
     </template>
     <template v-if="page === 'todo'">
       <button
@@ -23,12 +23,14 @@
       <button
         @click="startEditing()"
         class="btn btn-outline-primary border-0 ml-2"
+        id="startedit"
       >
         <span class="fa fa-edit"></span>
       </button>
       <button
-        @click="$emit('on-delete')"
+        @click="deleteTask"
         class="btn btn-outline-danger border-0"
+        id="delete"
       >
         <span class="fa fa-trash"></span>
       </button>
@@ -72,6 +74,9 @@ export default {
       console.log(e);
       e.target.checked = false;
       this.$emit("on-toggle");
+    },
+    deleteTask() {
+      this.$emit("on-delete");
     }
   }
 };
