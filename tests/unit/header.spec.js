@@ -1,4 +1,4 @@
-import { shallowMount, mount, createLocalVue } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 
 import Header from "@/components/layout/Header.vue";
 

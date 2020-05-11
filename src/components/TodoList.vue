@@ -6,7 +6,7 @@
       </div>
     </div>
 
-    <div class="row mb-3" v-if="page === 'todo'">
+    <div class="row mb-3 create-todo" v-if="page === 'todo'">
       <create-todo @on-new-todo="addTodo($event)" page="todo" />
     </div>
 
@@ -51,11 +51,7 @@ export default {
   },
   data() {
     return {
-      todos: [
-        // { description: "Do the dishes", completed: false },
-        // { description: "Take out the trash", completed: false },
-        // { description: "Finish doing laundry", completed: false }
-      ],
+      todos: [],
       doneTodos: []
     };
   },
@@ -82,7 +78,7 @@ export default {
   created() {
     this.todos = JSON.parse(localStorage.getItem("todos") || []);
     this.doneTodos = JSON.parse(localStorage.getItem("doneTodos") || []);
-    // localStorage.removeItem("doneTodos");
+    localStorage.removeItem("doneTodos");
   },
   components: { Todo, CreateTodo }
 };

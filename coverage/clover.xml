@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589232198564" clover="3.2.0">
-  <project timestamp="1589232198564" name="All files">
-    <metrics statements="39" coveredstatements="6" conditionals="8" coveredconditionals="2" methods="18" coveredmethods="4" elements="65" coveredelements="12" complexity="0" loc="39" ncloc="39" packages="5" files="8" classes="8"/>
+<coverage generated="1589233837546" clover="3.2.0">
+  <project timestamp="1589233837546" name="All files">
+    <metrics statements="39" coveredstatements="2" conditionals="8" coveredconditionals="0" methods="18" coveredmethods="2" elements="65" coveredelements="4" complexity="0" loc="39" ncloc="39" packages="5" files="8" classes="8"/>
     <package name="src">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="App.vue" path="C:\Users\zeezl\Desktop\instabug task 1\vue-todos\src\App.vue">
@@ -10,7 +10,7 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="30" coveredstatements="6" conditionals="8" coveredconditionals="2" methods="15" coveredmethods="4"/>
+      <metrics statements="30" coveredstatements="2" conditionals="8" coveredconditionals="0" methods="15" coveredmethods="2"/>
       <file name="CreateTodo.vue" path="C:\Users\zeezl\Desktop\instabug task 1\vue-todos\src\components\CreateTodo.vue">
         <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="16" count="3" type="stmt"/>
@@ -34,21 +34,21 @@
         <line num="79" count="0" type="stmt"/>
       </file>
       <file name="TodoList.vue" path="C:\Users\zeezl\Desktop\instabug task 1\vue-todos\src\components\TodoList.vue">
-        <metrics statements="14" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="7" coveredmethods="2"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
+        <metrics statements="14" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
         <line num="65" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
         <line num="75" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="83" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="84" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="80" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
     </package>
     <package name="src.components.layout">

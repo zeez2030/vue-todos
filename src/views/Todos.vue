@@ -1,5 +1,7 @@
 <template>
-  <todo-list list-name="My to-dos" page="todo" />
+  <div class="todo-list-container">
+    <todo-list list-name="My to-dos" page="todo" />
+  </div>
 </template>
 
 <script>
@@ -13,4 +15,17 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.todo-list-container {
+  text-align: center;
+  h1 {
+  }
+  ul {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
+</style>

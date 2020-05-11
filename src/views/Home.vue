@@ -13,13 +13,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .home {
   height: 70vh;
   display: flex;
   flex-direction: column;
-
   align-content: center;
   justify-content: center;
+  text-align: center;
 }
 </style>
