@@ -2,16 +2,30 @@
   <header class="header">
     <h1>TODO</h1>
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/todos">Todos</router-link>
-      <router-link to="/done">Done Todos</router-link>
+      <router-link to="/" id="home" v-on:click="setData('Home')"
+        >Home</router-link
+      >
+      <router-link to="/todos" id="todos" v-on:click="setData('Todos')"
+        >Todos</router-link
+      >
+      <router-link to="/done" id="done" v-on:click="setData('Done')"
+        >Done Todos</router-link
+      >
     </div>
   </header>
 </template>
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  data() {
+    route: "";
+  },
+  methods: {
+    setData(name) {
+      this.route = name;
+    }
+  }
 };
 </script>
 
