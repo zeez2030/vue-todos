@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1>TodoList</h1>
+    <h1>TODO</h1>
     <div id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/todos">Todos</router-link>
@@ -26,5 +26,10 @@ export default {
   color: #fff;
   padding-right: 5px;
   text-decoration: none;
+  margin-right: 2em;
+  transition: all 0.3s;
+}
+.header a:hover {
+  color: rgb(161, 40, 40);
 }
 </style>

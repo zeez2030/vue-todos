@@ -1,9 +1,10 @@
 <template>
-  <div class="about">
-    <h1>Home</h1>
-    <p>
-      This is the TodoList App For InstaBug Task
-    </p>
+  <div class="home">
+    <div>
+      <h1>Home</h1>
+    </div>
+
+    <p>This is the TodoList App For InstaBug Task</p>
   </div>
 </template>
 <script>
@@ -12,4 +13,13 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.home {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+
+  align-content: center;
+  justify-content: center;
+}
+</style>
