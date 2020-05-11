@@ -6,12 +6,12 @@
       </div>
     </div>
 
-    <div class="row mb-3" v-if="page==='todo'">
+    <div class="row mb-3" v-if="page === 'todo'">
       <create-todo @on-new-todo="addTodo($event)" page="todo" />
     </div>
 
     <div class="row">
-      <div class="col-12 col-sm-10 col-lg-6" v-if="page==='todo'">
+      <div class="col-12 col-sm-10 col-lg-6" v-if="page === 'todo'">
         <ul class="list-group">
           <todo
             page="todo"
@@ -88,5 +88,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
