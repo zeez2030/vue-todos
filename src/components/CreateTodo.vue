@@ -5,6 +5,7 @@
       type="text"
       class="form-control"
       placeholder="Create a new to-do..."
+      data-newtodo
     />
   </form>
 </template>
